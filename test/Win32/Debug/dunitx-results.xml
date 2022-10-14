@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\MyRepository\GA4D\test\Win32\Debug\GA4Dtest.exe" total="1" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2022-10-06" time="16.081">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="GA4Dtest.exe" executed="true" result="Success" success="True" time="16.081" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="GA4D" executed="true" result="Success" success="True" time="16.080" asserts="0" >
+          <results>
+              <test-suite type="Fixture" name="TGA4DTest" executed="True" result="Success" success="True" time="16.080" >
+                <results>
+                  <test-case name="RegistraEvento" executed="True" result="Success" success="True" time="16.078" asserts="0" />
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>
