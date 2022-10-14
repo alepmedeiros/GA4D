@@ -1,0 +1,12 @@
+{
+	"name": "GA4D",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/gabrielbaltazar/gbjson": "^1.0.10",
+		"https://github.com/viniciussanchez/restrequest4delphi": "^v3.0.18"
+	}
+}
