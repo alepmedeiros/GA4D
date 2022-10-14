@@ -12,6 +12,12 @@ type
   TGA4DTest = class
   private
     FGA4D: iGA4;
+
+    CONST
+      APISECRET = '';
+      CLIENTID = '';
+      USERID = '';
+      MEASUREMENTID = '';
   public
     [Setup]
     procedure Setup;
@@ -41,10 +47,10 @@ begin
   FGA4D := TGA4D.New;
   FGA4D
     .Config
-      .APISecret('rKMhVkGqS6W4vgfwhygcbQ')
-      .ClientId('GA4D')
-      .UserId('APP_Test_Unit')
-      .MeasurementId('G-2MQE8MC9KF');
+      .APISecret(APISECRET)
+      .ClientId(CLIENTID)
+      .UserId(USERID)
+      .MeasurementId(MEASUREMENTID);
 end;
 
 procedure TGA4DTest.TearDown;

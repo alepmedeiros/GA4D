@@ -73,7 +73,7 @@ begin
   lEvent:= TEvents.New;
   lEvent.Name := FName;
   lEvent.Params.Engagement_time_Msec := FTime;
-  lEvent.Params.Session_Id := FConfig.SesseionID;
+  lEvent.Params.Session_Id := FConfig.SessionID;
   FPayload.Events.Add(lEvent);
 
   FReq

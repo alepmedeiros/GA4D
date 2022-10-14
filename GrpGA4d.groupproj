@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{007D056F-31C7-4352-B2D3-D804CAC5F68F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="GA4D.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="test\GA4Dtest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GA4D">
+        <MSBuild Projects="GA4D.dproj"/>
+    </Target>
+    <Target Name="GA4D:Clean">
+        <MSBuild Projects="GA4D.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GA4D:Make">
+        <MSBuild Projects="GA4D.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GA4Dtest">
+        <MSBuild Projects="test\GA4Dtest.dproj"/>
+    </Target>
+    <Target Name="GA4Dtest:Clean">
+        <MSBuild Projects="test\GA4Dtest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GA4Dtest:Make">
+        <MSBuild Projects="test\GA4Dtest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GA4D;GA4Dtest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GA4D:Clean;GA4Dtest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GA4D:Make;GA4Dtest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

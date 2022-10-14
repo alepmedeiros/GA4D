@@ -32,6 +32,12 @@ requires
 
 contains
   ga4d.core.interfaces in 'src\core\ga4d.core.interfaces.pas',
-  ga4d.utils in 'src\utils\ga4d.utils.pas';
+  ga4d.utils in 'src\utils\ga4d.utils.pas',
+  ga4d.core.impl.config in 'src\core\impl\ga4d.core.impl.config.pas',
+  ga4d.core.impl.ga4d in 'src\core\impl\ga4d.core.impl.ga4d.pas',
+  ga4d.core.impl.ga4dbuild in 'src\core\impl\ga4d.core.impl.ga4dbuild.pas',
+  ga4d.entity.events in 'src\entity\ga4d.entity.events.pas',
+  ga4d.entity.params in 'src\entity\ga4d.entity.params.pas',
+  ga4d.entity.payload in 'src\entity\ga4d.entity.payload.pas';
 
 end.

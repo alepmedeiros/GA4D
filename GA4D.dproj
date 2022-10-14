@@ -67,7 +67,7 @@
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <SanitizedProjectName>GA4D</SanitizedProjectName>
-        <DCC_UnitSearchPath>$(DCC_UnitSearchPath);modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\gbjson\Source;modules\restrequest4delphi\src</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\gbjson\Source;modules\restrequest4delphi\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Android)'!=''">
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
@@ -114,6 +114,12 @@
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="src\core\ga4d.core.interfaces.pas"/>
         <DCCReference Include="src\utils\ga4d.utils.pas"/>
+        <DCCReference Include="src\core\impl\ga4d.core.impl.config.pas"/>
+        <DCCReference Include="src\core\impl\ga4d.core.impl.ga4d.pas"/>
+        <DCCReference Include="src\core\impl\ga4d.core.impl.ga4dbuild.pas"/>
+        <DCCReference Include="src\entity\ga4d.entity.events.pas"/>
+        <DCCReference Include="src\entity\ga4d.entity.params.pas"/>
+        <DCCReference Include="src\entity\ga4d.entity.payload.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

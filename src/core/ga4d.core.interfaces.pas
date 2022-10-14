@@ -18,7 +18,7 @@ type
     function ClientId: String; overload;
     function UserId(Value: String): iConfiguration; overload;
     function UserId: String; overload;
-    function SesseionID: String;
+    function SessionID: String;
     function MeasurementId(Value: String): iConfiguration; overload;
     function MeasurementId: String; overload;
   end;
