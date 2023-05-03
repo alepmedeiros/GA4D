@@ -29,6 +29,12 @@ type
     function Push: iBuild;
   end;
 
+  iRestClient = interface
+    function BaseURL(Value: String): iRestClient;
+    function Post: iRestClient;
+    function Body(Value: String): iRestClient;
+  end;
+
 implementation
 
 end.

@@ -28,7 +28,14 @@ package GA4D;
 {$IMPLICITBUILD ON}
 
 requires
-  rtl;
+  rtl,
+  bindengine,
+  dbrtl,
+  bindcomp,
+  RESTComponents,
+  FireDAC,
+  FireDACCommonDriver,
+  FireDACCommon;
 
 contains
   ga4d.core.interfaces in 'src\core\ga4d.core.interfaces.pas',
@@ -38,6 +45,7 @@ contains
   ga4d.core.impl.ga4dbuild in 'src\core\impl\ga4d.core.impl.ga4dbuild.pas',
   ga4d.entity.events in 'src\entity\ga4d.entity.events.pas',
   ga4d.entity.params in 'src\entity\ga4d.entity.params.pas',
-  ga4d.entity.payload in 'src\entity\ga4d.entity.payload.pas';
+  ga4d.entity.payload in 'src\entity\ga4d.entity.payload.pas',
+  ga4d.core.impl.restclient in 'src\core\impl\ga4d.core.impl.restclient.pas';
 
 end.

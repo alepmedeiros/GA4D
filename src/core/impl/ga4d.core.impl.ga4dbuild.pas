@@ -4,17 +4,19 @@ interface
 
 uses
   System.SysUtils,
-  RestRequest4D,
+//  RestRequest4D,
   ga4d.utils,
   ga4d.core.interfaces,
   ga4d.entity.events,
-  ga4d.entity.payload;
+  ga4d.entity.payload,
+  ga4d.core.impl.restclient;
 
 type
   TBuild = class(TInterfacedObject, iBuild)
   private
     FConfig: iConfiguration;
-    FReq: IRequest;
+//    FReq: IRequest;
+    FReq: iRestClient;
     FPayload: TPayload;
     FName: String;
     FTime: String;
@@ -35,8 +37,11 @@ begin
 
   FPayload:= TPayload.New;
 
-  FReq := TRequest.New.BaseURL(Format(GA4COLLECT.GetValue,
+  FReq := TRestClient.New.BaseURL(Format(GA4COLLECT.GetValue,
     [FConfig.MeasurementId, FConfig.APISecret]));
+
+//  FReq := TRequest.New.BaseURL(Format(GA4COLLECT.GetValue,
+//    [FConfig.MeasurementId, FConfig.APISecret]));
 end;
 
 destructor TBuild.Destroy;
@@ -77,7 +82,7 @@ begin
   FPayload.Events.Add(lEvent);
 
   FReq
-    .AddBody(FPayload.ToJson)
+    .Body(FPayload.ToJson.ToString)
     .Post;
 end;
 
