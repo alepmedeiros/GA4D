@@ -14,10 +14,10 @@ type
     FGA4D: iGA4;
 
     CONST
-      APISECRET = '';
-      CLIENTID = '';
+      APISECRET = 'DBZH7_HlSLWlPgHZVktQfw';
+      CLIENTID = '3854820615';
       USERID = '';
-      MEASUREMENTID = '';
+      MEASUREMENTID = 'G-7S90J0EX3X';
   public
     [Setup]
     procedure Setup;
